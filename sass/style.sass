@@ -1,13 +1,12 @@
 *
     padding: 0
     margin: 0
-    box-sizing: 0
+    box-sizing: border-box
 
-$color-blue:#5290EA
-$color-orange:#F28B64
-$color-grey:#E2E2E2
-$background-color:#F0F0F0
-
+$color-blue: #5290EA
+$color-orange: #F28B64
+$color-grey: #E2E2E2
+$background-color: #F0F0F0
 
 .container
     max-width: 1140px
@@ -17,6 +16,10 @@ $background-color:#F0F0F0
     min-height: 800px
     background-color: $background-color
     padding-top: 16px
+    position: relative
+    z-index: -10
+    &__content-container
+        display: flex
     &__logo
         width: 152px
     &__nav-container
@@ -28,7 +31,49 @@ $background-color:#F0F0F0
 .nav-menu
     &__list
         display: flex
-        gap:64px
+        gap: 64px
+    &__list-item
+        font-size: 18px
+        font-weight: 600
+        list-style-type: none
+    a
+        text-decoration: none
+
+.left-wrapper
+    position: relative
+    &__rectangle-blue
+        position: absolute
+        height: 220px
+        width: 630px
+        background-color: $color-blue
+        transform: rotate(-64deg)
+        top: 180px
+        left: -1000px
+        z-index: -3
+        border-radius: 100px
+    &__rectangle-orange
+        position: absolute
+        height: 220px
+        width: 670px
+        background-color: $color-orange
+        transform: rotate(-50deg)
+        top: 180px
+        left: -1000px
+        z-index: -2
+        border-radius: 100px
+    &__rectangle-grey
+        position: absolute
+        height: 220px
+        width: 670px
+        background-color: $color-grey
+        transform: rotate(-30deg)
+        top: 180px
+        left: -1000px
+        border-radius: 100px
+        z-index: -3
+    &__img
+        position: relative
+        z-index: 1
 
 // $background-color1: green
 // $background-color2: blue
@@ -47,4 +92,3 @@ $background-color:#F0F0F0
 
 // .block-2
 //     @include new-block
-    
